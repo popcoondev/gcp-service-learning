@@ -14,6 +14,15 @@
 - [infra/cloud-run/service.yaml](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/infra/cloud-run/service.yaml)
 - [infra/cloud-run/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/infra/cloud-run/README.md)
 
+## この教材で使う実値
+
+- `Project ID`: `gcp-service-learning`
+- `Region`: `asia-northeast1`
+- `Artifact Registry repository`: `gcp-service-learning`
+
+この 3 つが同じ名前系統でも問題ありません。  
+`Project` と `Repository` は別リソースなので、教材としてはむしろ追いやすいです。
+
 ## コードで変えた点
 
 ### 1. `/healthz` を追加
@@ -60,6 +69,18 @@ flowchart LR
     Run --> Health["GET /healthz"]
     Run --> Orders["POST/GET /orders"]
 ```
+
+## UI でどこを見るか
+
+1. `Artifact Registry > リポジトリ`
+   - `gcp-service-learning`
+   - format が `Docker`
+   - region が `asia-northeast1`
+2. `Cloud Run > サービスを作成`
+   - region が `asia-northeast1`
+   - image が `asia-northeast1-docker.pkg.dev/gcp-service-learning/gcp-service-learning/order-api:latest`
+3. `IAM と管理 > サービス アカウント`
+   - 実行用 SA を分けるか確認する
 
 ## 初心者のつまづきポイント
 

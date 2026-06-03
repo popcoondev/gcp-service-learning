@@ -18,6 +18,7 @@ HTTP ベースの注文 API をサーバーレスに実行し、最小運用で�
 - [Dockerfile](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/Dockerfile) でコンテナ化の入口を示しています
 - [infra/cloud-run/service.yaml](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/infra/cloud-run/service.yaml) で Cloud Run Service の教材用テンプレートを示しています
 - [docs/steps/step-02-cloud-run.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-02-cloud-run.md) で Step 単位の読み解きを用意しています
+- 今回の教材値は `Project ID: gcp-service-learning`, `Region: asia-northeast1`, `Artifact Registry repository: gcp-service-learning` です
 
 ## PM視点で何が難しいか
 
