@@ -55,8 +55,10 @@ flowchart LR
 ## Step 3: IAM / デプロイ権限
 
 - 読むファイル:
+  - [docs/steps/step-03-deploy-and-iam.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-03-deploy-and-iam.md)
   - [docs/services/iam.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/services/iam.md)
   - [docs/network-and-security.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/network-and-security.md)
+  - [infra/cloud-run/apis-and-iam.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/infra/cloud-run/apis-and-iam.md)
 - 目的:
   - 誰が deploy できるか、実行主体が何に触れるかを分離して考える
 - PM 観点:
