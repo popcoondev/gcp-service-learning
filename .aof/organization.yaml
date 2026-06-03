@@ -1,0 +1,38 @@
+organization_id: gcp-service-learning
+name: GCP Service Learning
+language: ja
+mission: GCP案件に参画する PM/SE が主要 GCP サービスを実践的に学べる教材を設計し継続改善する
+governance_scopes:
+  - concept-approval
+  - launch-approval
+clarification:
+  use_default_high_stakes_patterns: true
+  use_default_brownfield_patterns: true
+  high_stakes_terms:
+    - iam
+    - network
+    - security
+    - operations
+    - monitoring
+  brownfield_terms:
+    - retrofit
+    - migration
+    - legacy
+    - extension
+  question_policy:
+    initial_question_budget: 3
+    followup_budget: 2
+    max_rounds: 2
+    priority_order:
+      - high-stakes-risk
+      - missing-constraint
+      - brownfield-gap
+      - missing-success-criteria
+      - missing-prohibition
+  copy:
+    ja:
+      questions:
+        scope: 今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。
+      rationales:
+        scope: GCP 学習教材では実装範囲と学習範囲がズレやすいため、先に境界を固定します。
+      summary_initial_questions: runtime が GCP 学習教材としての clarification gap を検出し、初回質問を生成した

@@ -1,0 +1,11 @@
+actor_id: operations-guardian-01
+display_name: Operations Guardian
+kind: ai
+roles:
+  - Guardian
+capabilities:
+  - safety-review
+  - compliance-review
+  - iam-review
+  - operability-review
+policy_profile: gcp-learning-policy

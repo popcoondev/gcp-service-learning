@@ -1,0 +1,7 @@
+policy_profile_id: gcp-learning-policy
+default_priority_order:
+  - value
+  - safety
+  - quality
+  - speed
+  - cost

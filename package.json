@@ -1,0 +1,11 @@
+{
+  "name": "gcp-service-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "aof": "node ./tools/aof-runtime/src/cli.js",
+    "aof:visibility:build": "node ./scripts/build-aof-visibility.mjs",
+    "aof:visibility:serve": "node ./tools/aof-runtime/src/cli.js visibility-serve --status-input ./.aof/artifacts/visibility/status-card.json --timeline-input ./.aof/artifacts/visibility/timeline-feed.json --flow-input ./.aof/artifacts/visibility/flow-snapshot.json --port 4174 --title \"GCP Service Learning AOF Visibility\""
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "goal_type": "next-value-slice",
+  "content": "Automate visibility refresh from live .aof state and commit the operational workflow",
+  "updated_at": "2026-06-03T01:03:16.760Z",
+  "agreed_with_human": null,
+  "source_session_id": null,
+  "source_decision_record_id": null,
+  "declared_complete_at": null
+}

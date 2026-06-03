@@ -1,0 +1,11 @@
+actor_id: learning-visionary-01
+display_name: Learning Visionary
+kind: ai
+roles:
+  - Visionary
+capabilities:
+  - need-framing
+  - scope-definition
+  - curriculum-design
+  - stakeholder-alignment
+policy_profile: gcp-learning-policy

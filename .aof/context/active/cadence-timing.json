@@ -1,0 +1,13 @@
+{
+  "timing_type": "cadence-timing",
+  "recorded_at": "2026-06-03T01:03:16.763Z",
+  "timing_state": "due-now",
+  "reason": "No cadence-tick artifact has been recorded yet.",
+  "stale_after_hours": 24,
+  "last_alignment_pulse_at": "2026-06-03T01:03:01.341Z",
+  "last_framework_self_audit_at": "2026-06-03T01:03:16.758Z",
+  "last_cadence_tick_at": null,
+  "latest_open_task_triaged_at": "2026-06-03T01:03:01.341Z",
+  "source_session_id": null,
+  "source_decision_record_id": null
+}

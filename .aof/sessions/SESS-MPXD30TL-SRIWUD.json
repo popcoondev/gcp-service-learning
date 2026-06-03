@@ -1,0 +1,567 @@
+{
+  "session_id": "SESS-MPXD30TL-SRIWUD",
+  "workflow_id": "service-design",
+  "organization_id": "gcp-service-learning",
+  "organization": {
+    "language": "ja"
+  },
+  "status": "framed",
+  "trigger": {
+    "trigger_id": "TRG-MPXD30TL-81M696",
+    "trigger_type": "cli",
+    "received_at": "2026-06-03T01:02:08.360Z",
+    "request_payload": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい"
+  },
+  "current_stage": "planning",
+  "routing_mode": "deep-path",
+  "routing_mode_history": [
+    {
+      "from_mode": null,
+      "to_mode": "deep-path",
+      "at": "2026-06-03T01:02:08.360Z",
+      "reason": "session-created"
+    }
+  ],
+  "context_snapshot_id": "CTX-MPXD39EC-EEADUH",
+  "open_decision_ids": [
+    "DEC-MPXD39EG-A9QACJ"
+  ],
+  "closed_decision_ids": [
+    "DEC-MPXD30TN-VQ04IJ"
+  ],
+  "stage_transitions": [
+    {
+      "from_stage": null,
+      "to_stage": "clarification",
+      "from_status": null,
+      "to_status": "waiting_user",
+      "at": "2026-06-03T01:02:08.360Z",
+      "reason": "session-created"
+    },
+    {
+      "from_stage": "clarification",
+      "to_stage": "planning",
+      "from_status": "waiting_user",
+      "to_status": "framed",
+      "at": "2026-06-03T01:02:19.470Z",
+      "reason": "clarification-complete"
+    }
+  ],
+  "reopen_count": 0,
+  "outcome_reports": [],
+  "clarification": {
+    "round_count": 1,
+    "dimensions": {
+      "need_clarity": "partial",
+      "intent_clarity": "partial",
+      "context_completeness": "missing",
+      "success_criteria_clarity": "missing",
+      "prohibited_conditions_clarity": "partial",
+      "governance_scope_clarity": "clear",
+      "brownfield_orientation_completeness": "clear",
+      "risk_exposure": "partial"
+    },
+    "gaps": [
+      {
+        "dimension": "need_clarity",
+        "status": "partial",
+        "trigger_class": "ambiguity",
+        "summary": "解決したい本質的な need がまだ十分に特定されていません。"
+      },
+      {
+        "dimension": "intent_clarity",
+        "status": "partial",
+        "trigger_class": "ambiguity",
+        "summary": "実現したい方向性がまだ明確ではありません。"
+      },
+      {
+        "dimension": "context_completeness",
+        "status": "missing",
+        "trigger_class": "missing-constraint",
+        "summary": "制約、対象範囲、現状などの context が不足しています。"
+      },
+      {
+        "dimension": "success_criteria_clarity",
+        "status": "missing",
+        "trigger_class": "missing-success-criteria",
+        "summary": "成功判定に必要な基準が未定義です。"
+      },
+      {
+        "dimension": "prohibited_conditions_clarity",
+        "status": "partial",
+        "trigger_class": "missing-prohibition",
+        "summary": "変更してはいけない条件や非交渉事項が明示されていません。"
+      }
+    ],
+    "pending_questions": [],
+    "asked_questions": [
+      "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。",
+      "改善成功は、どの指標または状態で判断しますか",
+      "今回、変更してはいけない制約や既存要素はありますか"
+    ],
+    "question_rationale": [],
+    "trigger_classes": [],
+    "target_fields": [],
+    "user_answers": [
+      {
+        "question": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。",
+        "answer": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+        "target_fields": [
+          "need",
+          "context"
+        ]
+      },
+      {
+        "question": "改善成功は、どの指標または状態で判断しますか",
+        "answer": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+        "target_fields": [
+          "success_criteria",
+          "intent"
+        ]
+      },
+      {
+        "question": "今回、変更してはいけない制約や既存要素はありますか",
+        "answer": "変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。",
+        "target_fields": [
+          "context",
+          "prohibited_conditions"
+        ]
+      }
+    ],
+    "assumptions": [],
+    "ask_or_assume_decision": "ask",
+    "remaining_gaps": [],
+    "unresolved_ambiguity": [],
+    "question_budget": {
+      "initial_question_budget": 3,
+      "followup_budget": 2,
+      "max_rounds": 2
+    },
+    "next_stop_condition": "framing に進める",
+    "clarification_summary": "runtime は初回の clarification 回答を取り込み、framing に進める状態になった",
+    "should_wait_for_user": false
+  },
+  "created_at": "2026-06-03T01:02:08.360Z",
+  "updated_at": "2026-06-03T01:02:46.208Z",
+  "framing": {
+    "request": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい",
+    "need": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+    "intent": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+    "active_context": "context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+    "success_criteria": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+    "clarifications_or_assumptions": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+  },
+  "council_execution_runs": [
+    {
+      "execution_id": "CRUN-MPXD3KEH-L5B6A9",
+      "stage": "approval",
+      "routing_mode": "deep-path",
+      "execution_model": "single-instance-role-switching",
+      "primary_role": "Visionary",
+      "approval_mode": "sequential-all-seat",
+      "status": "completed",
+      "started_at": "2026-06-03T01:02:33.736Z",
+      "completed_at": "2026-06-03T01:02:33.737Z",
+      "summary": "prototype council execution prepared 3 seat calls in single-instance-role-switching: Visionary -> Builder -> Guardian with 3 completed model calls; approval status: approved",
+      "steps": [
+        {
+          "step_id": "CRUN-MPXD3KEH-L5B6A9-STEP-01",
+          "role": "Visionary",
+          "participation_mode": "primary",
+          "lane": "primary",
+          "call_purpose": "generate-approval-recommendation",
+          "status": "completed",
+          "summary": "prepare Visionary approval call as primary",
+          "packet": {
+            "metadata": {
+              "session_id": "SESS-MPXD30TL-SRIWUD",
+              "decision_id": "DEC-MPXD39EG-A9QACJ",
+              "stage": "approval",
+              "call_purpose": "generate-approval-recommendation"
+            },
+            "actor": {
+              "actor_id": "learning-visionary-01",
+              "actor_kind": "ai",
+              "active_role": "Visionary",
+              "capabilities": [
+                "need-framing",
+                "scope-definition",
+                "curriculum-design",
+                "stakeholder-alignment"
+              ],
+              "policy_profile": "gcp-learning-policy"
+            },
+            "governance": {
+              "governance_model": "council-of-three",
+              "governance_scope": "concept-approval",
+              "routing_mode": "deep-path",
+              "decision_rule": "majority-with-guardian-veto",
+              "veto_rule": "Guardian"
+            },
+            "context": {
+              "need": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+              "intent": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "active_context": "context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "context_snapshot_id": "CTX-MPXD39EC-EEADUH",
+              "clarifications_or_assumptions": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            },
+            "task": {
+              "request": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい",
+              "current_goal": "produce approval guidance across the required seats",
+              "expected_output_kind": "approval-recommendation"
+            },
+            "evidence": {
+              "relevant_artifacts": [],
+              "relevant_decisions": [
+                "DEC-MPXD39EG-A9QACJ"
+              ],
+              "relevant_signals": []
+            }
+          },
+          "started_at": "2026-06-03T01:02:33.737Z",
+          "completed_at": "2026-06-03T01:02:33.737Z",
+          "result": {
+            "provider": "mock",
+            "model": "aof-mock-model",
+            "generated_at": "2026-06-03T01:02:33.737Z",
+            "output_text": "DECISION: approve\nVETO: no\nVisionary approval response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 and align to 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。.",
+            "output_summary": "DECISION: approve VETO: no Visionary approval response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。",
+            "decision_signal": {
+              "recommendation": "approve",
+              "veto": false
+            },
+            "prompt_bundle": {
+              "system": "You are acting as Visionary in an AI Organization Framework runtime.\nCurrent stage: approval.\nCall purpose: generate-approval-recommendation.\nDecision rule: majority-with-guardian-veto.\nRespond concisely and focus on the current seat responsibility.",
+              "user": "Request: AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい\nNeed: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。\nIntent: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nActive Context: context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nCurrent Goal: produce approval guidance across the required seats\nExpected Output Kind: approval-recommendation\nClarifications or Assumptions: 今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            }
+          }
+        },
+        {
+          "step_id": "CRUN-MPXD3KEH-L5B6A9-STEP-02",
+          "role": "Builder",
+          "participation_mode": "required",
+          "lane": "follow-up",
+          "call_purpose": "generate-approval-recommendation",
+          "status": "completed",
+          "summary": "prepare Builder approval call as required",
+          "packet": {
+            "metadata": {
+              "session_id": "SESS-MPXD30TL-SRIWUD",
+              "decision_id": "DEC-MPXD39EG-A9QACJ",
+              "stage": "approval",
+              "call_purpose": "generate-approval-recommendation"
+            },
+            "actor": {
+              "actor_id": "platform-builder-01",
+              "actor_kind": "ai",
+              "active_role": "Builder",
+              "capabilities": [
+                "concept-design",
+                "delivery-planning",
+                "api-implementation",
+                "infrastructure-design"
+              ],
+              "policy_profile": "gcp-learning-policy"
+            },
+            "governance": {
+              "governance_model": "council-of-three",
+              "governance_scope": "concept-approval",
+              "routing_mode": "deep-path",
+              "decision_rule": "majority-with-guardian-veto",
+              "veto_rule": "Guardian"
+            },
+            "context": {
+              "need": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+              "intent": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "active_context": "context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "context_snapshot_id": "CTX-MPXD39EC-EEADUH",
+              "clarifications_or_assumptions": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            },
+            "task": {
+              "request": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい",
+              "current_goal": "produce approval guidance across the required seats",
+              "expected_output_kind": "approval-recommendation"
+            },
+            "evidence": {
+              "relevant_artifacts": [],
+              "relevant_decisions": [
+                "DEC-MPXD39EG-A9QACJ"
+              ],
+              "relevant_signals": []
+            }
+          },
+          "started_at": "2026-06-03T01:02:33.737Z",
+          "completed_at": "2026-06-03T01:02:33.737Z",
+          "result": {
+            "provider": "mock",
+            "model": "aof-mock-model",
+            "generated_at": "2026-06-03T01:02:33.737Z",
+            "output_text": "DECISION: approve\nVETO: no\nBuilder approval response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 and align to 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。.",
+            "output_summary": "DECISION: approve VETO: no Builder approval response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。",
+            "decision_signal": {
+              "recommendation": "approve",
+              "veto": false
+            },
+            "prompt_bundle": {
+              "system": "You are acting as Builder in an AI Organization Framework runtime.\nCurrent stage: approval.\nCall purpose: generate-approval-recommendation.\nDecision rule: majority-with-guardian-veto.\nRespond concisely and focus on the current seat responsibility.",
+              "user": "Request: AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい\nNeed: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。\nIntent: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nActive Context: context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nCurrent Goal: produce approval guidance across the required seats\nExpected Output Kind: approval-recommendation\nClarifications or Assumptions: 今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            }
+          }
+        },
+        {
+          "step_id": "CRUN-MPXD3KEH-L5B6A9-STEP-03",
+          "role": "Guardian",
+          "participation_mode": "required",
+          "lane": "follow-up",
+          "call_purpose": "generate-approval-recommendation",
+          "status": "completed",
+          "summary": "prepare Guardian approval call as required",
+          "packet": {
+            "metadata": {
+              "session_id": "SESS-MPXD30TL-SRIWUD",
+              "decision_id": "DEC-MPXD39EG-A9QACJ",
+              "stage": "approval",
+              "call_purpose": "generate-approval-recommendation"
+            },
+            "actor": {
+              "actor_id": "operations-guardian-01",
+              "actor_kind": "ai",
+              "active_role": "Guardian",
+              "capabilities": [
+                "safety-review",
+                "compliance-review",
+                "iam-review",
+                "operability-review"
+              ],
+              "policy_profile": "gcp-learning-policy"
+            },
+            "governance": {
+              "governance_model": "council-of-three",
+              "governance_scope": "concept-approval",
+              "routing_mode": "deep-path",
+              "decision_rule": "majority-with-guardian-veto",
+              "veto_rule": "Guardian"
+            },
+            "context": {
+              "need": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+              "intent": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "active_context": "context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "context_snapshot_id": "CTX-MPXD39EC-EEADUH",
+              "clarifications_or_assumptions": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            },
+            "task": {
+              "request": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい",
+              "current_goal": "produce approval guidance across the required seats",
+              "expected_output_kind": "approval-recommendation"
+            },
+            "evidence": {
+              "relevant_artifacts": [],
+              "relevant_decisions": [
+                "DEC-MPXD39EG-A9QACJ"
+              ],
+              "relevant_signals": []
+            }
+          },
+          "started_at": "2026-06-03T01:02:33.737Z",
+          "completed_at": "2026-06-03T01:02:33.737Z",
+          "result": {
+            "provider": "mock",
+            "model": "aof-mock-model",
+            "generated_at": "2026-06-03T01:02:33.737Z",
+            "output_text": "DECISION: approve\nVETO: no\nGuardian approval response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 and align to 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。.",
+            "output_summary": "DECISION: approve VETO: no Guardian approval response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。",
+            "decision_signal": {
+              "recommendation": "approve",
+              "veto": false
+            },
+            "prompt_bundle": {
+              "system": "You are acting as Guardian in an AI Organization Framework runtime.\nCurrent stage: approval.\nCall purpose: generate-approval-recommendation.\nDecision rule: majority-with-guardian-veto.\nRespond concisely and focus on the current seat responsibility.",
+              "user": "Request: AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい\nNeed: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。\nIntent: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nActive Context: context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nCurrent Goal: produce approval guidance across the required seats\nExpected Output Kind: approval-recommendation\nClarifications or Assumptions: 今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            }
+          }
+        }
+      ],
+      "approval_outcome": {
+        "status": "approved",
+        "guardian_veto_used": false,
+        "required_seat_count": 3,
+        "seat_signals": [
+          {
+            "role": "Visionary",
+            "recommendation": "approve",
+            "veto": false
+          },
+          {
+            "role": "Builder",
+            "recommendation": "approve",
+            "veto": false
+          },
+          {
+            "role": "Guardian",
+            "recommendation": "approve",
+            "veto": false
+          }
+        ]
+      }
+    },
+    {
+      "execution_id": "CRUN-MPXD3U0V-Y2VFKJ",
+      "stage": "planning",
+      "routing_mode": "deep-path",
+      "execution_model": "single-instance-role-switching",
+      "primary_role": "Builder",
+      "approval_mode": "single",
+      "status": "completed",
+      "started_at": "2026-06-03T01:02:46.207Z",
+      "completed_at": "2026-06-03T01:02:46.208Z",
+      "summary": "prototype council execution prepared 2 seat calls in single-instance-role-switching: Builder -> Visionary with 2 completed model calls",
+      "steps": [
+        {
+          "step_id": "CRUN-MPXD3U0V-Y2VFKJ-STEP-01",
+          "role": "Builder",
+          "participation_mode": "primary",
+          "lane": "primary",
+          "call_purpose": "generate-plan",
+          "status": "completed",
+          "summary": "prepare Builder planning call as primary",
+          "packet": {
+            "metadata": {
+              "session_id": "SESS-MPXD30TL-SRIWUD",
+              "decision_id": "DEC-MPXD39EG-A9QACJ",
+              "stage": "planning",
+              "call_purpose": "generate-plan"
+            },
+            "actor": {
+              "actor_id": "platform-builder-01",
+              "actor_kind": "ai",
+              "active_role": "Builder",
+              "capabilities": [
+                "concept-design",
+                "delivery-planning",
+                "api-implementation",
+                "infrastructure-design"
+              ],
+              "policy_profile": "gcp-learning-policy"
+            },
+            "governance": {
+              "governance_model": "council-of-three",
+              "governance_scope": "concept-approval",
+              "routing_mode": "deep-path",
+              "decision_rule": "majority-with-guardian-veto",
+              "veto_rule": "Guardian"
+            },
+            "context": {
+              "need": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+              "intent": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "active_context": "context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "context_snapshot_id": "CTX-MPXD39EC-EEADUH",
+              "clarifications_or_assumptions": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            },
+            "task": {
+              "request": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい",
+              "current_goal": "prepare the next executable plan from the framed request",
+              "expected_output_kind": "plan"
+            },
+            "evidence": {
+              "relevant_artifacts": [],
+              "relevant_decisions": [
+                "DEC-MPXD39EG-A9QACJ"
+              ],
+              "relevant_signals": []
+            }
+          },
+          "started_at": "2026-06-03T01:02:46.207Z",
+          "completed_at": "2026-06-03T01:02:46.208Z",
+          "result": {
+            "provider": "mock",
+            "model": "aof-mock-model",
+            "generated_at": "2026-06-03T01:02:46.208Z",
+            "output_text": "DECISION: proceed\nVETO: no\nBuilder planning response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 and align to 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。.",
+            "output_summary": "DECISION: proceed VETO: no Builder planning response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。",
+            "decision_signal": {
+              "recommendation": "proceed",
+              "veto": false
+            },
+            "prompt_bundle": {
+              "system": "You are acting as Builder in an AI Organization Framework runtime.\nCurrent stage: planning.\nCall purpose: generate-plan.\nDecision rule: majority-with-guardian-veto.\nRespond concisely and focus on the current seat responsibility.",
+              "user": "Request: AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい\nNeed: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。\nIntent: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nActive Context: context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nCurrent Goal: prepare the next executable plan from the framed request\nExpected Output Kind: plan\nClarifications or Assumptions: 今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            }
+          }
+        },
+        {
+          "step_id": "CRUN-MPXD3U0V-Y2VFKJ-STEP-02",
+          "role": "Visionary",
+          "participation_mode": "required",
+          "lane": "follow-up",
+          "call_purpose": "generate-plan",
+          "status": "completed",
+          "summary": "prepare Visionary planning call as required",
+          "packet": {
+            "metadata": {
+              "session_id": "SESS-MPXD30TL-SRIWUD",
+              "decision_id": "DEC-MPXD39EG-A9QACJ",
+              "stage": "planning",
+              "call_purpose": "generate-plan"
+            },
+            "actor": {
+              "actor_id": "learning-visionary-01",
+              "actor_kind": "ai",
+              "active_role": "Visionary",
+              "capabilities": [
+                "need-framing",
+                "scope-definition",
+                "curriculum-design",
+                "stakeholder-alignment"
+              ],
+              "policy_profile": "gcp-learning-policy"
+            },
+            "governance": {
+              "governance_model": "council-of-three",
+              "governance_scope": "concept-approval",
+              "routing_mode": "deep-path",
+              "decision_rule": "majority-with-guardian-veto",
+              "veto_rule": "Guardian"
+            },
+            "context": {
+              "need": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
+              "intent": "成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "active_context": "context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。",
+              "context_snapshot_id": "CTX-MPXD39EC-EEADUH",
+              "clarifications_or_assumptions": "今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            },
+            "task": {
+              "request": "AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい",
+              "current_goal": "prepare the next executable plan from the framed request",
+              "expected_output_kind": "plan"
+            },
+            "evidence": {
+              "relevant_artifacts": [],
+              "relevant_decisions": [
+                "DEC-MPXD39EG-A9QACJ"
+              ],
+              "relevant_signals": []
+            }
+          },
+          "started_at": "2026-06-03T01:02:46.208Z",
+          "completed_at": "2026-06-03T01:02:46.208Z",
+          "result": {
+            "provider": "mock",
+            "model": "aof-mock-model",
+            "generated_at": "2026-06-03T01:02:46.208Z",
+            "output_text": "DECISION: proceed\nVETO: no\nVisionary planning response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 and align to 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。.",
+            "output_summary": "DECISION: proceed VETO: no Visionary planning response: focus on 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。",
+            "decision_signal": {
+              "recommendation": "proceed",
+              "veto": false
+            },
+            "prompt_bundle": {
+              "system": "You are acting as Visionary in an AI Organization Framework runtime.\nCurrent stage: planning.\nCall purpose: generate-plan.\nDecision rule: majority-with-guardian-veto.\nRespond concisely and focus on the current seat responsibility.",
+              "user": "Request: AOF runtime, CLI, visibility-service をフル活用して、この GCP 学習教材リポジトリを runtime-backed project に進化させたい\nNeed: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。\nIntent: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nActive Context: context: 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | prohibited: 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。 | success: 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。\nCurrent Goal: prepare the next executable plan from the framed request\nExpected Output Kind: plan\nClarifications or Assumptions: 今回の value slice でどこまでを教材化し、どこから先を次フェーズへ送るか明確にしてください。 => 今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。 / 改善成功は、どの指標または状態で判断しますか => 成功条件は、AOF CLI で session / decision / goal projection が生成され、planning stage を council-exec で実行でき、visibility-service で status/timeline/flow を表示できること。 / 今回、変更してはいけない制約や既存要素はありますか => 変更してはいけない制約は、domain/usecase を GCP SDK 非依存に保つこと、初期 API スコープを壊さないこと、GitHub 公開を前提に教材として読みやすい構成を維持すること。"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "last_council_execution_id": "CRUN-MPXD3U0V-Y2VFKJ"
+}

@@ -1,0 +1,11 @@
+actor_id: platform-builder-01
+display_name: Platform Builder
+kind: ai
+roles:
+  - Builder
+capabilities:
+  - concept-design
+  - delivery-planning
+  - api-implementation
+  - infrastructure-design
+policy_profile: gcp-learning-policy

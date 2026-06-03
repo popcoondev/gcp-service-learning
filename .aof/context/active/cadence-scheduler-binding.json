@@ -1,0 +1,29 @@
+{
+  "binding_type": "cadence-scheduler-binding",
+  "recorded_at": "2026-06-03T01:03:01.354Z",
+  "scheduler_state": "invoke-now",
+  "reason": "No active alignment-pulse artifact is present.",
+  "recommended_poll_interval_minutes": 60,
+  "dispatch_command": "node ./src/cli.js cadence-dispatch --project . --stale-after-hours 24",
+  "profiles": {
+    "cron": {
+      "schedule_expression": "0 * * * *",
+      "command": "node ./src/cli.js cadence-dispatch --project . --stale-after-hours 24",
+      "reason": "Use a recurring cron trigger to poll cadence-dispatch conservatively before the stale threshold."
+    },
+    "github_actions": {
+      "cron_expression": "0 * * * *",
+      "command": "node ./src/cli.js cadence-dispatch --project . --stale-after-hours 24",
+      "reason": "Use a scheduled GitHub Actions workflow when the repository already relies on Actions for operational cadence."
+    },
+    "agent_loop": {
+      "interval_minutes": 60,
+      "command": "node ./src/cli.js cadence-dispatch --project . --stale-after-hours 24",
+      "reason": "Use an always-on agent loop when cadence should stay close to the Orchestrator runtime."
+    }
+  },
+  "recommended_next_check_at": "2026-06-03T01:03:01.353Z",
+  "recommended_next_check_after_hours": 0,
+  "source_session_id": "SESS-MPXD30TL-SRIWUD",
+  "source_decision_record_id": "DEC-MPXD39EG-A9QACJ"
+}

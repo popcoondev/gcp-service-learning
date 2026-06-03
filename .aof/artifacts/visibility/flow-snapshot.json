@@ -1,0 +1,54 @@
+{
+  "view_type": "flow_snapshot",
+  "nodes": [
+    {
+      "id": "request",
+      "label": "request_received",
+      "state": "done"
+    },
+    {
+      "id": "clarification",
+      "label": "clarification",
+      "state": "done"
+    },
+    {
+      "id": "planning",
+      "label": "planning",
+      "state": "current"
+    },
+    {
+      "id": "approval",
+      "label": "approval",
+      "state": "pending"
+    },
+    {
+      "id": "delivery",
+      "label": "delivery",
+      "state": "pending"
+    }
+  ],
+  "edges": [
+    {
+      "from": "request",
+      "to": "clarification",
+      "reason": "initial framing started"
+    },
+    {
+      "from": "clarification",
+      "to": "planning",
+      "reason": "clarification answers accepted"
+    },
+    {
+      "from": "planning",
+      "to": "approval",
+      "reason": "council planning completed"
+    },
+    {
+      "from": "approval",
+      "to": "delivery",
+      "reason": "approved slice is implemented"
+    }
+  ],
+  "current_node": "planning",
+  "open_branches": []
+}

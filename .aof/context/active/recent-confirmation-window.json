@@ -1,0 +1,36 @@
+{
+  "window_type": "recent-confirmation-window",
+  "updated_at": "2026-06-03T01:03:16.760Z",
+  "entries": [
+    {
+      "question": "external cadence scheduler は次に何をすべきか",
+      "answer": "Run cadence-cycle now.",
+      "recorded_at": "2026-06-03T01:03:01.355Z",
+      "expectation_state": "cadence scheduling is now machine-readable for an external scheduler",
+      "mismatch_state": null,
+      "scale_direction": "connect this schedule surface to a real external scheduler",
+      "source_session_id": "SESS-MPXD30TL-SRIWUD",
+      "source_decision_record_id": "DEC-MPXD39EG-A9QACJ"
+    },
+    {
+      "question": "production cadence scheduler profile として何を選んだか",
+      "answer": "github_actions was selected as the primary cadence scheduler profile.",
+      "recorded_at": "2026-06-03T01:03:01.357Z",
+      "expectation_state": "the production scheduler choice is now explicit in runtime memory",
+      "mismatch_state": null,
+      "scale_direction": "apply the selected scheduler profile in real operation",
+      "source_session_id": "SESS-MPXD30TL-SRIWUD",
+      "source_decision_record_id": "DEC-MPXD39EG-A9QACJ"
+    },
+    {
+      "question": "framework self-audit で次に残る gap は何か",
+      "answer": "visibility projection is currently maintained by a local helper script rather than a framework-native projection command",
+      "recorded_at": "2026-06-03T01:03:16.760Z",
+      "expectation_state": "AOF runtime, CLI, and visibility workflow are now active in the repository",
+      "mismatch_state": "visibility projection is currently maintained by a local helper script rather than a framework-native projection command",
+      "scale_direction": "keep runtime evidence current and wire scheduler-backed refresh into repository operations",
+      "source_session_id": null,
+      "source_decision_record_id": null
+    }
+  ]
+}

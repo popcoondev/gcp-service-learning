@@ -1,0 +1,20 @@
+{
+  "pulse_type": "alignment-pulse",
+  "triggered_at": "2026-06-03T01:03:01.341Z",
+  "question": "まだ解くべき問題は同じか",
+  "answer": "はい。いまは live .aof state を visibility-service へ投影することが最優先",
+  "expectation_state": "runtime-backed repository state is active",
+  "mismatch_state": null,
+  "scale_direction": "add automatic visibility refresh and document the operator loop",
+  "open_task_ids": [
+    "TASK-001"
+  ],
+  "prioritized_task_ids": [
+    "TASK-001"
+  ],
+  "stale_task_ids": [],
+  "retire_candidate_task_ids": [],
+  "triage_note": "Keep TASK-001 focused on runtime and visibility evidence",
+  "source_session_id": null,
+  "source_decision_record_id": null
+}

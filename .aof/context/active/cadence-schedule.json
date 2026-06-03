@@ -1,0 +1,16 @@
+{
+  "schedule_type": "cadence-schedule",
+  "recorded_at": "2026-06-03T01:03:16.763Z",
+  "timing_state": "due-now",
+  "scheduler_state": "invoke-now",
+  "reason": "No cadence-tick artifact has been recorded yet.",
+  "external_scheduler_required": true,
+  "recommended_command": "node ./src/cli.js cadence-cycle --project . --stale-after-hours 24",
+  "recommended_next_check_at": "2026-06-03T01:03:16.763Z",
+  "recommended_next_check_after_hours": 0,
+  "current_cycle_state": null,
+  "current_tick_state": null,
+  "stale_after_hours": 24,
+  "source_session_id": null,
+  "source_decision_record_id": null
+}

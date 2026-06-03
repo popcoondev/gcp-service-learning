@@ -1,0 +1,125 @@
+openapi: 3.0.3
+info:
+  title: Order API Learning Sample
+  version: 0.1.0
+  description: |
+    GCP学習教材向けの注文APIサンプルです。
+    初期スコープではインメモリ保存を利用し、将来的に Cloud Run / Spanner /
+    Pub/Sub へ拡張できるようヘキサゴナルアーキテクチャで構成します。
+servers:
+  - url: http://localhost:8080
+paths:
+  /orders:
+    post:
+      summary: Create an order
+      operationId: createOrder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOrderRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /orders/{orderId}:
+    get:
+      summary: Get an order
+      operationId: getOrderById
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderResponse'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    CreateOrderRequest:
+      type: object
+      required:
+        - customerId
+        - items
+      properties:
+        customerId:
+          type: string
+          minLength: 1
+        items:
+          type: array
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/OrderItemRequest'
+    OrderItemRequest:
+      type: object
+      required:
+        - productId
+        - quantity
+      properties:
+        productId:
+          type: string
+          minLength: 1
+        quantity:
+          type: integer
+          minimum: 1
+    OrderResponse:
+      type: object
+      required:
+        - orderId
+        - customerId
+        - items
+        - status
+        - createdAt
+      properties:
+        orderId:
+          type: string
+        customerId:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderItemResponse'
+        status:
+          type: string
+          example: ACCEPTED
+        createdAt:
+          type: string
+          format: date-time
+    OrderItemResponse:
+      type: object
+      required:
+        - productId
+        - quantity
+      properties:
+        productId:
+          type: string
+        quantity:
+          type: integer
+    ErrorResponse:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string

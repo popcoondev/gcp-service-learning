@@ -1,0 +1,16 @@
+{
+  "profile_type": "cadence-scheduler-profile",
+  "recorded_at": "2026-06-03T01:03:01.356Z",
+  "selected_profile": "github_actions",
+  "note": "Prefer GitHub Actions as the first production scheduler profile for this repo",
+  "dispatch_command": "node ./src/cli.js cadence-dispatch --project . --stale-after-hours 24",
+  "profile_details": {
+    "schedule_expression": null,
+    "cron_expression": "0 * * * *",
+    "interval_minutes": null,
+    "command": "node ./src/cli.js cadence-dispatch --project . --stale-after-hours 24",
+    "reason": "Use a scheduled GitHub Actions workflow when the repository already relies on Actions for operational cadence."
+  },
+  "source_session_id": "SESS-MPXD30TL-SRIWUD",
+  "source_decision_record_id": "DEC-MPXD39EG-A9QACJ"
+}

@@ -1,0 +1,15 @@
+{
+  "audit_type": "framework-self-audit",
+  "recorded_at": "2026-06-03T01:03:16.758Z",
+  "audit_id": "FSA-001",
+  "scope": "bootstrap runtime adoption",
+  "summary": "AOF runtime, CLI, and visibility workflow are now active in the repository",
+  "detected_gap": "visibility projection is currently maintained by a local helper script rather than a framework-native projection command",
+  "result_state": null,
+  "next_action": "keep runtime evidence current and wire scheduler-backed refresh into repository operations",
+  "related_task_ids": [
+    "TASK-001"
+  ],
+  "source_session_id": null,
+  "source_decision_record_id": null
+}

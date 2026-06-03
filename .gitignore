@@ -1,0 +1,6 @@
+bin/
+.DS_Store
+*.log
+node_modules/
+tools/aof-runtime/node_modules/
+work/ai-organization-framework/

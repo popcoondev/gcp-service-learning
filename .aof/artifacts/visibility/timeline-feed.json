@@ -1,0 +1,27 @@
+{
+  "view_type": "timeline_feed",
+  "entries": [
+    {
+      "at": "2026-06-03T01:02:46.208Z",
+      "actor": "Facilitator",
+      "event_type": "framed",
+      "summary": "AOF session SESS-MPXD30TL-SRIWUD is active for this repository",
+      "rationale": "Runtime-backed project tracking is now enabled for the learning repository",
+      "next": "Advance council planning and update the next value slice",
+      "refs": [
+        "SESS-MPXD30TL-SRIWUD"
+      ]
+    },
+    {
+      "at": "2026-06-03T01:04:17.702Z",
+      "actor": "Council of Three",
+      "event_type": "decision_record",
+      "summary": "Decision record exists for the bootstrap learning slice",
+      "rationale": "The repository keeps explicit artifact and outcome intent in AOF form",
+      "next": "Continue with runtime-managed clarification and approval history",
+      "refs": [
+        "DEC-001-bootstrap-learning-repo"
+      ]
+    }
+  ]
+}
