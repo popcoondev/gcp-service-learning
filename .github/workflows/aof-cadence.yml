@@ -1,0 +1,65 @@
+name: AOF Cadence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aof-cadence
+  cancel-in-progress: false
+
+jobs:
+  cadence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tools/aof-runtime/package-lock.json
+
+      - name: Install AOF runtime dependencies
+        working-directory: tools/aof-runtime
+        run: npm ci
+
+      - name: Run cadence cycle
+        run: |
+          node ./tools/aof-runtime/src/cli.js cadence-cycle \
+            --project . \
+            --resolution keep-open \
+            --note "Scheduled GitHub Actions cadence cycle" \
+            --stale-after-hours 24
+
+      - name: Rebuild visibility artifacts
+        run: node ./scripts/build-aof-visibility.mjs
+
+      - name: Upload visibility artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: aof-visibility
+          path: |
+            .aof/artifacts/visibility/status-card.json
+            .aof/artifacts/visibility/timeline-feed.json
+            .aof/artifacts/visibility/flow-snapshot.json
+
+      - name: Commit updated AOF state
+        run: |
+          if git diff --quiet -- .aof; then
+            echo "No AOF state changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .aof
+          git commit -m "Refresh AOF cadence state"
+          git push

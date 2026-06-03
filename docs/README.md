@@ -6,8 +6,9 @@
 2. [docs/learning-roadmap.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/learning-roadmap.md) で STEP 単位の学習順を確認する
 3. [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md) で現行実装の学習導線を追う
 4. [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md) と [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md) でファイルの意味とコードブロックの役割を読む
-5. `docs/services/` 配下で各 GCP サービスの責務と導入タイミングを確認する
-6. `.aof/` 配下でなぜこの教材構造にしたかの判断記録を読む
+5. [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md) で AOF runtime / visibility / Actions の運用構成を読む
+6. `docs/services/` 配下で各 GCP サービスの責務と導入タイミングを確認する
+7. `.aof/` 配下でなぜこの教材構造にしたかの判断記録を読む
 
 ## 推奨学習順
 
@@ -30,6 +31,7 @@
 - Step 1 詳説: [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
 - リポジトリマップ: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
 - コードウォークスルー: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
+- AOF 運用ガイド: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
 
 ## サービス一覧
 

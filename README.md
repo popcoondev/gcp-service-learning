@@ -19,7 +19,8 @@ OpenAPI 定義から始める Go 注文 API と、GCP 実践学習教材を同�
 2. 現在の実装を学ぶ: [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
 3. ファイルの意味を引く: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
 4. コードをブロックごとに読む: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
-5. GCP サービス単位で広げる: [docs/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/README.md)
+5. AOF の運用を読む: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
+6. GCP サービス単位で広げる: [docs/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/README.md)
 
 ## 初期スコープ
 
@@ -264,6 +265,17 @@ npm run aof:visibility:serve
 - [.aof/artifacts/visibility/timeline-feed.json](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/.aof/artifacts/visibility/timeline-feed.json)
 - [.aof/artifacts/visibility/flow-snapshot.json](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/.aof/artifacts/visibility/flow-snapshot.json)
 
+### GitHub Actions Cadence
+
+`github_actions` scheduler profile に合わせて、AOF cadence を定期実行する workflow を追加しています。
+
+- Workflow: [.github/workflows/aof-cadence.yml](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/.github/workflows/aof-cadence.yml)
+- 運用ガイド: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
+- 主な役割:
+  - `cadence-cycle` を 1 時間ごとに実行
+  - visibility JSON を再生成
+  - `.aof` 更新があれば commit / push
+
 ## 学習ロードマップ
 
 ```mermaid
@@ -282,6 +294,7 @@ STEP ごとの詳説:
 - Step 1: [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
 - リポジトリマップ: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
 - コードウォークスルー: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
+- AOF 運用ガイド: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
 
 ## docs ガイド
 
