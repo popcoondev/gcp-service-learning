@@ -38,6 +38,15 @@
 - `roles/pubsub.publisher`
 - `roles/spanner.databaseUser`
 
+UI での作業:
+
+1. `IAM と管理 > サービス アカウント`
+2. `サービス アカウントを作成`
+3. 名前: `order-api-runtime`
+4. ロール付与:
+   - `Logs Writer`
+   - `Monitoring Metric Writer`
+
 ### 2. デプロイ実行主体
 
 人間ユーザーか CI/CD のどちらかです。
@@ -48,6 +57,36 @@
 - `roles/iam.serviceAccountUser`
 - 必要に応じて `roles/cloudbuild.builds.editor`
 
+UI での作業:
+
+1. `IAM と管理 > IAM`
+2. デプロイする人か CI 用 SA を選ぶ
+3. 次のロールを付与する
+   - `Cloud Run Admin`
+   - `Artifact Registry Writer`
+   - `Service Account User`
+   - 必要に応じて `Cloud Build Editor`
+
+## CLI で付与する場合の例
+
+```bash
+gcloud projects add-iam-policy-binding gcp-service-learning \
+  --member="serviceAccount:order-api-runtime@gcp-service-learning.iam.gserviceaccount.com" \
+  --role="roles/logging.logWriter"
+
+gcloud projects add-iam-policy-binding gcp-service-learning \
+  --member="serviceAccount:order-api-runtime@gcp-service-learning.iam.gserviceaccount.com" \
+  --role="roles/monitoring.metricWriter"
+```
+
+デプロイ主体への付与例:
+
+```bash
+gcloud projects add-iam-policy-binding gcp-service-learning \
+  --member="user:YOUR_EMAIL@example.com" \
+  --role="roles/run.admin"
+```
+
 ## PM 観点での注意
 
 - 「誰が deploy できるか」と「アプリが何にアクセスできるか」は分けて考える
@@ -57,3 +96,4 @@
 
 - `allow unauthenticated` は学習用に分かりやすいが、本番要件とは分けて考える
 - 権限不足時のエラーは Cloud Run, Cloud Build, Artifact Registry のどこで落ちたか切り分ける
+- `roles/editor` でまとめて逃げず、最低限ロールを積み上げて理解するほうが教材価値が高い

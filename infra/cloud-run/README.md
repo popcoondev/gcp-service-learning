@@ -32,6 +32,17 @@
 - `gcp-service-learning` repository が Docker 形式で作成されているか
 - 実行用 Service Account を `order-api-runtime@gcp-service-learning.iam.gserviceaccount.com` として用意するか
 
+## 初回デプロイ後の確認
+
+1. `Cloud Run > order-api`
+   - URL が払い出されているか
+2. `/healthz`
+   - `{"status":"ok","service":"order-api"}` を返すか
+3. `/orders`
+   - POST が `201` で返るか
+4. `ログ エクスプローラ`
+   - Cloud Run のリクエストログが出ているか
+
 ## 補足
 
 `Project ID` と `Artifact Registry repository` がどちらも `gcp-service-learning` でも問題ありません。  

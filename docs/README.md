@@ -34,6 +34,7 @@
 - リポジトリマップ: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
 - コードウォークスルー: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
 - AOF 運用ガイド: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
+- GitHub Actions Deploy ガイド: [docs/reference/github-actions-deploy.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/github-actions-deploy.md)
 
 ## サービス一覧
 

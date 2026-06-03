@@ -22,7 +22,8 @@ OpenAPI 定義から始める Go 注文 API と、GCP 実践学習教材を同�
 5. ファイルの意味を引く: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
 6. コードをブロックごとに読む: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
 7. AOF の運用を読む: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
-8. GCP サービス単位で広げる: [docs/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/README.md)
+8. GitHub Actions deploy を読む: [docs/reference/github-actions-deploy.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/github-actions-deploy.md)
+9. GCP サービス単位で広げる: [docs/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/README.md)
 
 ## 初期スコープ
 
@@ -301,6 +302,7 @@ STEP ごとの詳説:
 - リポジトリマップ: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
 - コードウォークスルー: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
 - AOF 運用ガイド: [docs/reference/aof-operations.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/aof-operations.md)
+- GitHub Actions Deploy ガイド: [docs/reference/github-actions-deploy.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/github-actions-deploy.md)
 
 ## docs ガイド
 

@@ -40,6 +40,12 @@
    - region を `asia-northeast1`
    - service account を `order-api-runtime`
 
+## 先に決めること
+
+1. `order-api-runtime` を実行用 SA にする
+2. 認証なし公開は学習用に許可する
+3. 最初は Logging / Monitoring だけ権限付与する
+
 ## CLI でやること
 
 ```bash
@@ -53,6 +59,28 @@ chmod +x infra/cloud-run/deploy.sh
 - Docker 認証設定
 - Cloud Build による image build
 - Cloud Run deploy
+
+## デプロイ後の確認
+
+1. Cloud Run URL にアクセスできる
+2. `GET /healthz` が `200` を返す
+3. `POST /orders` が `201` を返す
+4. Cloud Logging にリクエストログが出る
+
+確認用の例:
+
+```bash
+curl https://YOUR_CLOUD_RUN_URL/healthz
+
+curl -X POST https://YOUR_CLOUD_RUN_URL/orders \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "customerId": "cust-001",
+    "items": [
+      { "productId": "book-001", "quantity": 1 }
+    ]
+  }'
+```
 
 ## デプロイフロー図
 
@@ -95,3 +123,4 @@ flowchart LR
 
 - 最初は UI で作ってもよいが、再現手順は必ず script か IaC に寄せる
 - 「誰が build/deploy できるか」と「アプリが何に触れるか」を同じ議論にしない
+- まず `/healthz` で疎通確認し、その後に `/orders` を叩くと切り分けが速い
