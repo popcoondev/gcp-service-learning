@@ -41,15 +41,33 @@ type errorResponse struct {
 	Message string `json:"message"`
 }
 
+type healthResponse struct {
+	Status  string `json:"status"`
+	Service string `json:"service"`
+}
+
 func NewHandler(service application.OrderService) Handler {
 	return Handler{service: service}
 }
 
 func (h Handler) Routes() http.Handler {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/healthz", h.handleHealth)
 	mux.HandleFunc("/orders", h.handleOrders)
 	mux.HandleFunc("/orders/", h.handleOrderByID)
 	return mux
+}
+
+func (h Handler) handleHealth(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		writeJSON(w, http.StatusMethodNotAllowed, errorResponse{Message: "method not allowed"})
+		return
+	}
+
+	writeJSON(w, http.StatusOK, healthResponse{
+		Status:  "ok",
+		Service: "order-api",
+	})
 }
 
 func (h Handler) handleOrders(w http.ResponseWriter, r *http.Request) {

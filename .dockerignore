@@ -1,0 +1,12 @@
+.git
+.github
+.aof
+.cache
+node_modules
+tools/aof-runtime/node_modules
+work
+docs
+README.md
+package.json
+scripts
+.DS_Store

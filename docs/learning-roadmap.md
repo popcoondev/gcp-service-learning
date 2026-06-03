@@ -44,7 +44,9 @@ flowchart LR
 ## Step 2: Cloud Run
 
 - 読むファイル:
+  - [docs/steps/step-02-cloud-run.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-02-cloud-run.md)
   - [docs/services/cloud-run.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/services/cloud-run.md)
+  - [infra/cloud-run/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/infra/cloud-run/README.md)
 - 目的:
   - ローカルの `go run` が Cloud Run 上のコンテナ実行にどう変わるか理解する
 - 意識点:

@@ -9,6 +9,17 @@ info:
 servers:
   - url: http://localhost:8080
 paths:
+  /healthz:
+    get:
+      summary: Health check
+      operationId: getHealth
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
   /orders:
     post:
       summary: Create an order
@@ -123,3 +134,15 @@ components:
       properties:
         message:
           type: string
+    HealthResponse:
+      type: object
+      required:
+        - status
+        - service
+      properties:
+        status:
+          type: string
+          example: ok
+        service:
+          type: string
+          example: order-api
