@@ -28,7 +28,7 @@
 
 ### 1. 実行用 SA
 
-- `order-api-runtime@gcp-service-learning.iam.gserviceaccount.com`
+- `order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com`
 
 想定 role:
 - `roles/logging.logWriter`
@@ -70,19 +70,19 @@ UI での作業:
 ## CLI で付与する場合の例
 
 ```bash
-gcloud projects add-iam-policy-binding gcp-service-learning \
-  --member="serviceAccount:order-api-runtime@gcp-service-learning.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding gcp-service-learning-498313 \
+  --member="serviceAccount:order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com" \
   --role="roles/logging.logWriter"
 
-gcloud projects add-iam-policy-binding gcp-service-learning \
-  --member="serviceAccount:order-api-runtime@gcp-service-learning.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding gcp-service-learning-498313 \
+  --member="serviceAccount:order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com" \
   --role="roles/monitoring.metricWriter"
 ```
 
 デプロイ主体への付与例:
 
 ```bash
-gcloud projects add-iam-policy-binding gcp-service-learning \
+gcloud projects add-iam-policy-binding gcp-service-learning-498313 \
   --member="user:YOUR_EMAIL@example.com" \
   --role="roles/run.admin"
 ```

@@ -17,7 +17,7 @@
 
 ## この教材で使う実値
 
-- `Project ID`: `gcp-service-learning`
+- `Project ID`: `gcp-service-learning-498313`
 - `Region`: `asia-northeast1`
 - `Artifact Registry repository`: `gcp-service-learning`
 - `Cloud Run service name`: `order-api`
@@ -32,7 +32,7 @@
    - Cloud Logging
    - Cloud Monitoring
 2. `IAM と管理 > サービス アカウント`
-   - `order-api-runtime` を作る
+   - `order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com` を作る
 3. `Artifact Registry > リポジトリ`
    - `gcp-service-learning` が Docker / asia-northeast1 であることを確認
 4. `Cloud Run > サービスを作成`
@@ -111,7 +111,7 @@ flowchart LR
 ## 初心者のつまづきポイント
 
 - repository 名と image 名は別物
-- `Project ID` と `Artifact Registry repository` が同じでも問題ない
+- `Project ID` と `Artifact Registry repository` は同じでなくても問題ない
 - Cloud Run 作成に失敗しても、原因は Cloud Build や IAM のことがある
 
 ## PM 観点で意識すること

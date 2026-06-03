@@ -13,9 +13,9 @@ spec:
     spec:
       containerConcurrency: 80
       timeoutSeconds: 300
-      serviceAccountName: order-api-runtime@gcp-service-learning.iam.gserviceaccount.com
+      serviceAccountName: order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com
       containers:
-        - image: asia-northeast1-docker.pkg.dev/gcp-service-learning/gcp-service-learning/order-api:latest
+        - image: asia-northeast1-docker.pkg.dev/gcp-service-learning-498313/gcp-service-learning/order-api:latest
           ports:
             - name: http1
               containerPort: 8080

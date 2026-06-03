@@ -27,7 +27,7 @@
 
 ## 初心者のつまづきポイント
 
-- `order-api-runtime` は Cloud Run 実行用であり、GitHub Actions deploy 用ではない
+- `order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com` は Cloud Run 実行用であり、GitHub Actions deploy 用ではない
 - GitHub secrets が未設定だと workflow は認証前に失敗する
 
 ## ベテランからのアドバイス

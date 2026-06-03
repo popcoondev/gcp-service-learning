@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-PROJECT_ID="${PROJECT_ID:-gcp-service-learning}"
+PROJECT_ID="${PROJECT_ID:-gcp-service-learning-498313}"
 REGION="${REGION:-asia-northeast1}"
 REPOSITORY="${REPOSITORY:-gcp-service-learning}"
 SERVICE_NAME="${SERVICE_NAME:-order-api}"

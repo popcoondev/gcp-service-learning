@@ -9,11 +9,11 @@
 
 ## この repo で使う値
 
-- `Project ID`: `gcp-service-learning`
+- `Project ID`: `gcp-service-learning-498313`
 - `Region`: `asia-northeast1`
 - `Artifact Registry repository`: `gcp-service-learning`
 - 想定 image URI:
-  - `asia-northeast1-docker.pkg.dev/gcp-service-learning/gcp-service-learning/order-api:latest`
+  - `asia-northeast1-docker.pkg.dev/gcp-service-learning-498313/gcp-service-learning/order-api:latest`
 
 ## いまの段階で見るポイント
 
@@ -30,7 +30,7 @@
 
 - Cloud Run と Artifact Registry がどちらも `asia-northeast1` になっているか
 - `gcp-service-learning` repository が Docker 形式で作成されているか
-- 実行用 Service Account を `order-api-runtime@gcp-service-learning.iam.gserviceaccount.com` として用意するか
+- 実行用 Service Account を `order-api-runtime@gcp-service-learning-498313.iam.gserviceaccount.com` として用意するか
 
 ## 初回デプロイ後の確認
 
@@ -45,5 +45,5 @@
 
 ## 補足
 
-`Project ID` と `Artifact Registry repository` がどちらも `gcp-service-learning` でも問題ありません。  
-教材としては、むしろ命名ルールが単純で追いやすい構成です。
+今回は `Project ID` が `gcp-service-learning-498313`、`Artifact Registry repository` が `gcp-service-learning` です。  
+同じ名前でそろっていなくても問題ありません。`Project` と `Repository` は別リソースです。
