@@ -1,6 +1,6 @@
 {
   "view_type": "status_card",
-  "as_of": "2026-06-03T06:40:19.036Z",
+  "as_of": "2026-06-03T08:43:29.849Z",
   "usage_level": "runtime mandatory",
   "current_phase": "planning",
   "current_goal": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",

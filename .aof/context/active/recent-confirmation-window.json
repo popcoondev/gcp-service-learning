@@ -1,17 +1,7 @@
 {
   "window_type": "recent-confirmation-window",
-  "updated_at": "2026-06-03T06:40:18.987Z",
+  "updated_at": "2026-06-03T08:43:29.800Z",
   "entries": [
-    {
-      "question": "cadence tick は何を判断したか",
-      "answer": "No cadence-tick artifact has been recorded yet. Current cadence guidance does not require follow-through beyond normal monitoring.",
-      "recorded_at": "2026-06-03T04:36:08.841Z",
-      "expectation_state": "cadence tick can now evaluate cadence state even when follow-through still needs more explicit input",
-      "mismatch_state": null,
-      "scale_direction": "reduce remaining operator input needs for cadence follow-through",
-      "source_session_id": null,
-      "source_decision_record_id": null
-    },
     {
       "question": "cadence cycle は何を実行したか",
       "answer": "No cadence-tick artifact has been recorded yet. Current cadence guidance does not require follow-through beyond normal monitoring.",
@@ -26,6 +16,16 @@
       "question": "cadence cycle は何を実行したか",
       "answer": "Cadence surfaces are fresh enough; no self-start is required right now.",
       "recorded_at": "2026-06-03T06:40:18.987Z",
+      "expectation_state": "cadence cycle can now defer cadence work when the runtime says it is not due",
+      "mismatch_state": null,
+      "scale_direction": "keep checking timing until cadence becomes due-now",
+      "source_session_id": null,
+      "source_decision_record_id": null
+    },
+    {
+      "question": "cadence cycle は何を実行したか",
+      "answer": "Cadence surfaces are fresh enough; no self-start is required right now.",
+      "recorded_at": "2026-06-03T08:43:29.800Z",
       "expectation_state": "cadence cycle can now defer cadence work when the runtime says it is not due",
       "mismatch_state": null,
       "scale_direction": "keep checking timing until cadence becomes due-now",
