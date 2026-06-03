@@ -3,22 +3,33 @@
 ## 読み方
 
 1. [README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/README.md) で全体像と Mermaid 図を把握する
-2. [api/openapi.yaml](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/api/openapi.yaml) と Go 実装を対応づけて読む
-3. `docs/services/` 配下で各 GCP サービスの責務と導入タイミングを確認する
-4. `.aof/` 配下でなぜこの教材構造にしたかの判断記録を読む
+2. [docs/learning-roadmap.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/learning-roadmap.md) で STEP 単位の学習順を確認する
+3. [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md) で現行実装の学習導線を追う
+4. [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md) と [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md) でファイルの意味とコードブロックの役割を読む
+5. `docs/services/` 配下で各 GCP サービスの責務と導入タイミングを確認する
+6. `.aof/` 配下でなぜこの教材構造にしたかの判断記録を読む
 
 ## 推奨学習順
 
-1. Cloud Run
-2. IAM
-3. Pub/Sub
-4. Spanner
-5. Cloud Logging
-6. Cloud Monitoring
-7. OpenTelemetry
-8. Terraform
-9. GCS / BigQuery / Workflows
-10. GKE / PAM / VPC Service Controls
+1. [Step 0: 全体像](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/learning-roadmap.md)
+2. [Step 1: OpenAPI + Go + In-Memory](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
+3. Cloud Run
+4. IAM
+5. Pub/Sub
+6. Spanner
+7. Cloud Logging
+8. Cloud Monitoring
+9. OpenTelemetry
+10. Terraform
+11. GCS / BigQuery / Workflows
+12. GKE / PAM / VPC Service Controls
+
+## 学習導線
+
+- 学習ロードマップ: [docs/learning-roadmap.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/learning-roadmap.md)
+- Step 1 詳説: [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
+- リポジトリマップ: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
+- コードウォークスルー: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
 
 ## サービス一覧
 

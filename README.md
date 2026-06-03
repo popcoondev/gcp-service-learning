@@ -11,6 +11,16 @@ OpenAPI 定義から始める Go 注文 API と、GCP 実践学習教材を同�
 - ネットワーク、IAM、運用監視を実装と一緒に読む方法
 - PM/SE が設計レビューで見るべき論点
 
+## この教材の読み方
+
+この repo は「README を読んで終わり」ではなく、STEP 単位で読み進める教材として設計します。
+
+1. 全体像を掴む: [docs/learning-roadmap.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/learning-roadmap.md)
+2. 現在の実装を学ぶ: [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
+3. ファイルの意味を引く: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
+4. コードをブロックごとに読む: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
+5. GCP サービス単位で広げる: [docs/README.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/README.md)
+
 ## 初期スコープ
 
 - `POST /orders`
@@ -54,8 +64,26 @@ curl http://localhost:8080/orders/<orderId>
 ├── internal/adapters/http/      # HTTP adapter
 ├── internal/adapters/repository # 保存先 adapter
 ├── docs/                        # GCP 学習教材
+│   ├── steps/                   # STEP 単位の学習ガイド
+│   └── reference/               # ファイルとコードの読解ガイド
 └── .aof/                        # AOF の framing / governance / decisions
 ```
+
+## 実装の読み解き図
+
+```mermaid
+flowchart LR
+    Client["Client / curl / Browser"] --> Main["cmd/server/main.go"]
+    Main --> Handler["HTTP Handler"]
+    Handler --> Service["OrderService"]
+    Service --> Domain["Order Domain"]
+    Service --> RepoPort["OrderRepository interface"]
+    RepoPort --> Memory["In-Memory Repository"]
+    Service -. future .-> EventPort["OrderEventPublisher interface"]
+    EventPort -. future .-> PubSub["Pub/Sub Adapter"]
+```
+
+この図は「どこにコードがあるか」ではなく、「どこで責務が切れているか」を見るための図です。
 
 ## システムアーキテクチャ図
 
@@ -247,6 +275,13 @@ flowchart LR
     s5 --> s6["Step 6<br/>Terraform"]
     s6 --> s7["Step 7<br/>GKE / IAM / PAM / VPC SC"]
 ```
+
+STEP ごとの詳説:
+
+- ロードマップ本体: [docs/learning-roadmap.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/learning-roadmap.md)
+- Step 1: [docs/steps/step-01-openapi-go-inmemory.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/steps/step-01-openapi-go-inmemory.md)
+- リポジトリマップ: [docs/reference/repository-map.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/repository-map.md)
+- コードウォークスルー: [docs/reference/code-walkthrough.md](/Users/mn/Documents/Codex/2026-06-03/aof-go-openapi-api-github-aof/docs/reference/code-walkthrough.md)
 
 ## docs ガイド
 
