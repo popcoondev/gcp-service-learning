@@ -1,11 +1,11 @@
 {
   "tick_type": "cadence-tick",
-  "recorded_at": "2026-06-03T04:36:07.250Z",
+  "recorded_at": "2026-06-04T05:45:08.694Z",
   "timing_state": "due-now",
   "guidance_trigger_state": "idle",
   "guidance_batching_mode": "none",
   "tick_state": "due-no-follow-through",
-  "reason": "No cadence-tick artifact has been recorded yet. Current cadence guidance does not require follow-through beyond normal monitoring.",
+  "reason": "Open task triage freshness exceeded the 24-hour cadence threshold. Current cadence guidance does not require follow-through beyond normal monitoring.",
   "follow_through_executed_action": null,
   "source_session_id": null,
   "source_decision_record_id": null
