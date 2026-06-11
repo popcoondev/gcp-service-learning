@@ -1,6 +1,6 @@
 {
   "cycle_type": "cadence-cycle",
-  "recorded_at": "2026-06-11T17:23:35.304Z",
+  "recorded_at": "2026-06-11T19:09:23.444Z",
   "timing_state": "not-due",
   "cycle_state": "deferred-not-due",
   "reason": "Cadence surfaces are fresh enough; no self-start is required right now.",
