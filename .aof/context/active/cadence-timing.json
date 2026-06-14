@@ -1,13 +1,13 @@
 {
   "timing_type": "cadence-timing",
-  "recorded_at": "2026-06-14T13:39:01.970Z",
+  "recorded_at": "2026-06-14T14:52:13.019Z",
   "timing_state": "not-due",
   "reason": "Cadence surfaces are fresh enough; no self-start is required right now.",
   "stale_after_hours": 24,
   "last_alignment_pulse_at": "2026-06-03T01:03:01.341Z",
   "last_framework_self_audit_at": "2026-06-03T01:03:16.758Z",
-  "last_cadence_tick_at": "2026-06-13T13:39:50.670Z",
-  "latest_open_task_triaged_at": "2026-06-13T13:39:50.669Z",
+  "last_cadence_tick_at": "2026-06-14T14:52:13.013Z",
+  "latest_open_task_triaged_at": "2026-06-14T14:52:13.011Z",
   "source_session_id": null,
   "source_decision_record_id": null
 }
