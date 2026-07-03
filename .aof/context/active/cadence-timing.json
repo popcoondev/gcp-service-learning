@@ -1,6 +1,6 @@
 {
   "timing_type": "cadence-timing",
-  "recorded_at": "2026-07-03T18:16:14.600Z",
+  "recorded_at": "2026-07-03T20:18:02.558Z",
   "timing_state": "not-due",
   "reason": "Cadence surfaces are fresh enough; no self-start is required right now.",
   "stale_after_hours": 24,
