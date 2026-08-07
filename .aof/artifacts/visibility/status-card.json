@@ -1,6 +1,6 @@
 {
   "view_type": "status_card",
-  "as_of": "2026-08-07T03:52:59.906Z",
+  "as_of": "2026-08-07T05:44:14.380Z",
   "usage_level": "runtime mandatory",
   "current_phase": "planning",
   "current_goal": "今回の value slice では、この repo を AOF runtime で実行可能にし、clarification と planning の履歴、visibility-service による現在状態表示までを教材化する。Cloud Run や Spanner 実接続は次フェーズに送る。",
@@ -19,6 +19,6 @@
   "cadence_scheduler_state": "poll-later",
   "cadence_dispatch_state": "ready",
   "cadence_scheduler_profile": "github_actions",
-  "cadence_next_check_at": "2026-08-07T04:17:13.460Z",
+  "cadence_next_check_at": "2026-08-08T05:44:14.317Z",
   "cadence_reason": "Cadence surfaces are fresh enough; no self-start is required right now."
 }
