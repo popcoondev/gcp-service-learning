@@ -1,17 +1,7 @@
 {
   "window_type": "recent-confirmation-window",
-  "updated_at": "2026-08-16T18:35:27.862Z",
+  "updated_at": "2026-08-16T19:24:37.415Z",
   "entries": [
-    {
-      "question": "cadence cycle は何を実行したか",
-      "answer": "Cadence surfaces are fresh enough; no self-start is required right now.",
-      "recorded_at": "2026-08-16T16:31:18.779Z",
-      "expectation_state": "cadence cycle can now defer cadence work when the runtime says it is not due",
-      "mismatch_state": null,
-      "scale_direction": "keep checking timing until cadence becomes due-now",
-      "source_session_id": null,
-      "source_decision_record_id": null
-    },
     {
       "question": "cadence cycle は何を実行したか",
       "answer": "Cadence surfaces are fresh enough; no self-start is required right now.",
@@ -26,6 +16,16 @@
       "question": "cadence cycle は何を実行したか",
       "answer": "Cadence surfaces are fresh enough; no self-start is required right now.",
       "recorded_at": "2026-08-16T18:35:27.862Z",
+      "expectation_state": "cadence cycle can now defer cadence work when the runtime says it is not due",
+      "mismatch_state": null,
+      "scale_direction": "keep checking timing until cadence becomes due-now",
+      "source_session_id": null,
+      "source_decision_record_id": null
+    },
+    {
+      "question": "cadence cycle は何を実行したか",
+      "answer": "Cadence surfaces are fresh enough; no self-start is required right now.",
+      "recorded_at": "2026-08-16T19:24:37.415Z",
       "expectation_state": "cadence cycle can now defer cadence work when the runtime says it is not due",
       "mismatch_state": null,
       "scale_direction": "keep checking timing until cadence becomes due-now",
