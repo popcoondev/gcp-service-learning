@@ -9,11 +9,11 @@
   "related_decision_record_id": null,
   "operating_goal_ref": "runtime-backed-learning-repo",
   "created_at": "2026-06-03T01:02:46.204Z",
-  "updated_at": "2026-10-01T05:15:48.579Z",
+  "updated_at": "2026-10-02T12:14:22.066Z",
   "assigned_at": null,
   "done_at": null,
   "retired_at": null,
-  "last_triaged_at": "2026-10-01T05:15:48.578Z",
+  "last_triaged_at": "2026-10-02T12:14:22.065Z",
   "stale_candidate_at": null,
   "retire_candidate_at": null,
   "triage_notes": "Keep TASK-001 focused on runtime and visibility evidence [prioritized]"
